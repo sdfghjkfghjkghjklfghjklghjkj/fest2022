@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+ 
+ <html > 
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="icon" src="logo.jpg" type="image/x-icon">
+
+
+   <link rel="stylesheet" href="fest-menu.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" charset="UTF-8"></script>
+
+
+
+
+
+</head>
+<body>
+
+
+        
+
+   <div class="menu-btn">
+       <i class="fas fa-bars"></i>
+   </div>
+   <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h2>HTML Table</h2>
+    
+    <table>
+      <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+      </tr>
+      <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+      </tr>
+      <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr>
+      <tr>
+        <td>Ernst Handel</td>
+        <td>Roland Mendel</td>
+        <td>Austria</td>
+      </tr>
+      <tr>
+        <td>Island Trading</td>
+        <td>Helen Bennett</td>
+        <td>UK</td>
+      </tr>
+      <tr>
+        <td>Laughing Bacchus Winecellars</td>
+        <td>Yoshi Tannamuri</td>
+        <td>Canada</td>
+      </tr>
+      <tr>
+        <td>Magazzini Alimentari Riuniti</td>
+        <td>Giovanni Rovelli</td>
+        <td>Italy</td>
+      </tr>
+    </table>
+   <div class="side-bar">
+       <div class="close-btn">
+           <i class="fas fa-times"></i>
+       </div>
+       <div class="menu">
+           <div class="item"><a href="index.html"><i class="fas fa-desktop"></i>HOME</a></div>
+             <div class="item"><a href="schedule.html"><i class="fa-solid fa-clock"></i>SCHEDULE</a></div>
+
+             <div class="item">
+               <a class="sub-btn"><i class="fa fa-edit"></i>RESULT<i class="fas fa-angle-right dropdown"></i></a> 
+               <div class="sub-menu">
+                   <a href="result-junior.html" class="sub-item">JUNIOR</a>
+                   <a href="result-senior.html" class="sub-item">SENIOR</a>
+                   <a href="result-general.htm" class="sub-item">GENERAL</a>
+                </div>
+            </div>
+
+           <div class="item">
+               <a class="sub-btn"><i class="fa-solid fa-chart-simple"></i>GRAPH<i class="fas fa-angle-right dropdown "></i></a>
+               <div class="sub-menu">
+                   <a href="graph-junior.html" class="sub-item">JUNIOR</a>
+                   <a href="graph-senior.html" class="sub-item">SENIOR</a>
+                   <a href="graph-general.html" class="sub-item">GENERAL</a>
+               </div>
+           </div>
+
+             <div class="item"><a href="graph-total.html"><i class="fas fa-info-circle"></i>TOTAL GRAPH</a></div>
+
+             <div class="item">
+                <a class="sub-btn"><i class="fa fa-image"></i>IMAGES<i class="fas fa-angle-right dropdown "></i></a>
+                <div class="sub-menu">
+                    <a href="images-fest.html" class="sub-item">FEST</a>
+                    <a href="images-on-stage.html" class="sub-item">ON-STAGE</a>
+                    <a href="images-off-stage.html" class="sub-item">OFF-STAGE</a>
+                </div>
+            </div>
+
+        </div>
+
+   </div>
+
+   <section class="main">
+       <h1>Sidebar Menu With<br>Sub-Menus</h1>
+
+   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+       <script type="text/javascript">
+           $(document).ready(function(){
+               //jquery for toggle sub menus
+               $('.sub-btn').click(function(){
+                   $(this).next('.sub-menu').slideToggle();
+                   $(this).find('.dropdown').toggleClass('rotate')
+                    
+               })
+               //jquery for expand and collapse the sidebar
+               $('.menu-btn').click(function(){
+                   $('.side-bar').addClass('active');
+                   $('menu-btn').css("visibility","hidden");
+               })
+               $('.close-btn').click(function(){
+                   $('.side-bar').removeClass('active');
+                   $('menu-btn').css("visibility","visible");
+               })
+           })
+       </script>
+    
+</body>
+</html>
